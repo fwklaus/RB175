@@ -1,0 +1,7 @@
+<html>
+  <% info = display_user_info(@current_user)%>
+  <h1><%= @current_user.to_s.capitalize %></h1>
+  <p><strong>email: </strong><%= @email %></p>
+  <h2>Interests</h2>
+  <p><%=@current_user.to_s.capitalize%>'s interests are <%=format_interests(@interests)%>.</p>
+</html>

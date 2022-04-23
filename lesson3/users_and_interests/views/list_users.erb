@@ -1,0 +1,6 @@
+<html>
+  <%names = parse_for_names(@all_users) %>
+  <% names.each do |name| %>
+    <h1><a href="/<%=name%>"><%= name.to_s.capitalize %></a></h1>
+  <% end %>
+</html>

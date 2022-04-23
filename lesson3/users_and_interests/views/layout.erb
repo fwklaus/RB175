@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Challenge</title>
+  </head>
+  <body>
+    <h1><em>Users and Interests:</em></h1>
+    <%= yield %>
+    <br><br>
+    <% if @current_user %>
+    <h1>Other User Pages:</h1>
+      <% other_users(@current_user).each do |user| %>
+        <h3><a href="/<%=user%>"><%=user.to_s%></a></h3>
+      <% end %>
+    <br><br>
+    <p>"There are <%=total_users%> with a total of <%=count_interests%>"</p>
+    <% end %>
+  </body>
+<html>
+

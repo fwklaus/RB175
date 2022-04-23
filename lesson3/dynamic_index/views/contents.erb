@@ -1,0 +1,16 @@
+<html>
+  <% files = @contents.keep_if { |file| file =~ /\.[a-z]*/ } %>
+  <ul>
+    <% files.each do |file| %>
+      <% if file =~ /Identifier/ %>
+        <li><a href="/identifier"><%= file %></a></li>
+      <% else %>
+        <li><a href="/<%= file %>"><%= file %></a></li>
+      <% end %>
+    <% end %>
+    <a href="/ascending"><em>Sort ascending</em></a><br>
+    <a href="/descending"><b>Sort descending</b></a>
+  </ul>
+</html>
+
+

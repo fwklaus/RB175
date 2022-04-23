@@ -1,0 +1,11 @@
+<html>
+  <% @alphabet.each_with_index do |char, idx| %>
+    <ul>
+      <% if idx % 4 == 0  %>
+        <h1><li><%= idx + 1 %>. <em><%= char %><em></li></h2>
+      <% else %>
+        <h3><li><%= idx + 1 %>. <%= char %></li></h3>
+      <% end %>
+    </ul>
+  <% end %>
+</html>
